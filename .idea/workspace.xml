@@ -4,7 +4,6 @@
     <list default="true" id="cad074cf-7c12-42fc-86fc-7c8bfa6f8e7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/meteo.js" beforeDir="false" afterPath="$PROJECT_DIR$/meteo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet.html" beforeDir="false" afterPath="$PROJECT_DIR$/projet.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projet.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -26,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meteo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="360">
+              <caret line="24" column="131" selection-start-line="24" selection-start-column="131" selection-end-line="24" selection-end-column="131" />
             </state>
           </provider>
         </entry>
@@ -44,8 +43,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/meteo.js" />
         <option value="$PROJECT_DIR$/projet.html" />
+        <option value="$PROJECT_DIR$/meteo.js" />
       </list>
     </option>
   </component>
@@ -134,11 +133,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547563571738</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="href">
+      <created>1547564718897</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547564718897</updated>
+    </task>
+    <task id="LOCAL-00006" summary="correction">
+      <created>1547565528511</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547565528511</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3100000" />
+    <option name="totallyTimeSpent" value="4183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
@@ -170,7 +183,9 @@
     <MESSAGE value="Test push auth" />
     <MESSAGE value="Update parsed jSON" />
     <MESSAGE value="meta" />
-    <option name="LAST_COMMIT_MESSAGE" value="meta" />
+    <MESSAGE value="href" />
+    <MESSAGE value="correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -190,17 +205,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meteo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meteo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="131" selection-start-line="24" selection-start-column="131" selection-end-line="24" selection-end-column="131" />
         </state>
       </provider>
     </entry>
