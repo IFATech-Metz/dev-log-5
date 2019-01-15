@@ -24,6 +24,7 @@ function init_page() {
             console.log(parsed);
             document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", in " + (Math.round(parsed.main.temp - 273.15)) +
             " degree celsius" + " in " + parsed.name + "";
+            document.getElementById("url").innerHTML = get_url();
         }
     };
 
