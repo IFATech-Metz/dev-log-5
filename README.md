@@ -1,9 +1,9 @@
 # Projet en équipe IFA 
 
-Objetcif: 
+Objectif: 
 
-- Travail d'quipe --> Origaniser un plan de travail (fonctionalité par personne) 
-                    - eviter les conflits
+- Travail d'équipe --> Organiser un plan de travail (fonctionalités par personne) 
+                    - éviter les conflits
                     
                     - Ficher en commun 
                     
