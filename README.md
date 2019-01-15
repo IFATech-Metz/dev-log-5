@@ -6,6 +6,6 @@ Objetcif:
                     - eviter les conflits
                     
                     - Ficher en commun 
-                    
+                    - prise du controle
                     
 
