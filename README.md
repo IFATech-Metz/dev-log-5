@@ -6,6 +6,6 @@ Objectif:
                     - éviter les conflits
                     
                     - Ficher en commun 
-                    
+                    - prise du controle
                     
 
