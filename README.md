@@ -1,5 +1,11 @@
-# Test git push Michael SCHUSTER
-# Bonjour
-# push from konsole
-# Write this kate 
-# Try this
+# Projet en équipe IFA 
+
+Objetcif: 
+
+- Travail d'quipe --> Origaniser un plan de travail (fonctionalité par personne) 
+                    - eviter les conflits
+                    
+                    - Ficher en commun 
+                    
+                    - 
+
