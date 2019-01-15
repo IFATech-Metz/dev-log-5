@@ -17,12 +17,11 @@ function get_url() {
 function init_page() {
     xhr.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            console.log(this);
             let weatherJson = this.responseText;
             console.log(weatherJson);
             let parsed = JSON.parse(weatherJson);
             console.log(parsed);
-            document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", in " + (Math.round(parsed.main.temp - 273.15)) +
+            document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", it is " + (Math.round(parsed.main.temp - 273.15)) +
             " degree celsius" + " in " + parsed.name + "";
             document.getElementById("url").href = get_url();
         }
