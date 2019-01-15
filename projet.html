@@ -3,11 +3,20 @@
         <meta charset="UTF-8">
         <title>Météo du jour</title>
         <script src="meteo.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body onload="init_page()">
-        <h1>Application M&eacute;t&eacute;o</h1>
-        <a id="url" href="#">Lien</a>
+        <h1>Application M&eacute;t&eacute;o</h1><br>
+
+        <p>
+            <label>
+                <input type="text" id="ville" value=""/><br><br>
+                <button type="button" class="btn btn-primary">Envoyer</button>
+            </label>
+        </p>
+
+        <a id="url" href="#">Lien API</a>
 
 
 
