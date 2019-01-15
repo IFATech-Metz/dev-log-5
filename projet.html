@@ -8,20 +8,12 @@
     </head>
     <body onload="init_page()">
         <h1>Application M&eacute;t&eacute;o</h1><br>
-
         <p>
             <label>
                 <input type="text" id="ville" value=""/><br><br>
-                <button type="button" class="btn btn-primary">Envoyer</button>
+                <button type="button" class="btn btn-primary" onclick="get_temperature()">Envoyer</button>
             </label>
         </p>
-
-        <a id="url" href="#">Lien API</a>
-
-
-
-        <div id="meteo">
-
-        </div>
+        <div id="meteo"></div>
     </body>
 </html>
