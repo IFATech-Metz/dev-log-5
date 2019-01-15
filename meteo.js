@@ -22,10 +22,11 @@ function init_page() {
             console.log(weatherJson);
             let parsed = JSON.parse(weatherJson);
             console.log(parsed);
-            document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", temperature is " + (Math.round(parsed.main.temp - 273.15)) + " degree celsius" + ", wind speed is " + parsed.wind.speed + "" ;
+            document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", in " + (Math.round(parsed.main.temp - 273.15)) +
+            " degree celsius" + " in " + parsed.name + "";
         }
     };
 
-    xhr.open("GET", get_url(), true)
+    xhr.open("GET", get_url(), true);
     xhr.send()
 }
