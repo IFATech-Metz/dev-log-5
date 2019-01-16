@@ -6,21 +6,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body onload="init_page()">
-        <h1>Application M&eacute;t&eacute;o</h1><br>
-        <p>
-            <label>
-                <input type="text" id="ville" value=""/><br><br>
-                <button type="button" class="btn btn-primary" onclick="get_temperature()">Envoyer</button>
-            </label>
-        </p>
-
+    <body onload="onLoad()">
     <div class="container">
         <div class="weather">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Ville</h5>
-                    <p class="card-text">Température locale</p>
+                    <p id="id01" class="card-text"></p>
                 </div>
              </div>
         </div>
@@ -31,10 +23,8 @@
                     <h5 class="card-title">Nouvelle ville</h5>
                     <label></label>
                     <p class="card-text">Ville</p>
-                    <label><input /></label>
-                    <p class="card-text">Pays</p>
-                    <label><input /></label>
-                    <a href="#" class="btn btn-primary">Actualiser</a>
+                    <label><input id="ville"/></label>
+                    <a href="#" class="btn btn-primary" onclick="onClick(document.getElementById('ville').value)">Actualiser</a>
                 </div>
             </div>
         </div>

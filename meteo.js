@@ -4,53 +4,66 @@ const xhr = new XMLHttpRequest();
 // http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?
 // date=1527811200&opacity=0.9&fill_bound=true&appid={api_key}
 
-const base_url = "http://api.openweathermap.org/data/2.5/weather";
-let city;
+const base_url = "http://api.openweathermap.org/data/2.5/weather";;
 const appid = "f5e810531af1756846022c6f387acf25";
 const unit = "metric";
+let weatherData;
 
-function get_url() {
+let dataArray = {
+    "weather": "",
+    "temp": "",
+    "icon": "",
+    "humidity": "",
+    "pressure": "",
+}
+
+function getUrl(city) {
     return base_url + "?"
         + "q=" + city + "&"
         + "appid=" + appid
         + "&units=" + unit;
 }
 
-function init_page() {
+function xmlRequest(city) {;
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            let weatherJson = this.responseText;
-            console.log(weatherJson);
-            let parsed = JSON.parse(weatherJson);
-            console.log(parsed);
-            let icon = response.weather[0].icon;
-            let src = "openweathermap.org/img/w/" + icon + ".png";
-            document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", it is " + parsed.main.temp +
-                " degree celsius" + " in " + parsed.name;
-            document.getElementById("url").href = get_url();
-            document.getElementById("icon").src = src;
+            parsingWeatherData(this.responseText);
+        }
+        else{
+            parsingWeatherData(false);
         }
     };
-
-    xhr.open("GET", get_url(), true);
+    xhr.open("GET", getUrl(city), true);
     xhr.send()
 }
 
-function get_temperature() {
-    city = document.getElementById("ville").value;
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            let weatherJson = this.responseText;
-            console.log(weatherJson);
-            let parsed = JSON.parse(weatherJson);
-            console.log(parsed);
-            document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", it is " + parsed.main.temp +
-                " degree celsius" + " in " + parsed.name;
-            document.getElementById("url").href = get_url();
-        }
-    };
 
-    xhr.open("GET", get_url(), true);
-    xhr.send()
+function onLoad() {
+    xmlRequest("Metz");
 }
 
+function onClick(city) {
+    xmlRequest(city);
+}
+
+function insertData(data) {
+    let element = document.getElementById("id01");
+    let info = "Temp: " + dataArray.weather + " <br /> " +
+    "Température: " + dataArray.temp + " <br /> " +
+    "Humidité: " + dataArray.humidity + " <br /> " +
+    "Préssion: " + dataArray.pressure + " <br /> ";
+    element.innerHTML = info;
+}
+
+function parsingWeatherData(request){
+    weatherData = (request ? JSON.parse(request) : false);
+    if(weatherData){
+        dataArray.weather = weatherData.weather[0].description;
+        dataArray.temp = weatherData.main.temp;
+        dataArray.icon = weatherData.weather[0].icon;
+        dataArray.humidity = weatherData.main.humidity;
+        dataArray.pressure = weatherData.main.pressure;
+        console.log(dataArray);
+        insertData(dataArray);
+    }
+}
