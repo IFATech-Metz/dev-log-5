@@ -6,3 +6,7 @@ Codes API à utiliser
 * f5e810531af1756846022c6f387acf25 
 * 348e43383864ecfba8b0827cc402f3ff 
 * 2956ff49de9d7e9faa3cc83cc4805ee8 
+
+
+Icon weather SVG:
+https://www.iconfinder.com/iconsets/weather-color-2
