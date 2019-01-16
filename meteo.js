@@ -17,24 +17,28 @@ function get_url() {
 }
 
 function init_page() {
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let weatherJson = this.responseText;
             console.log(weatherJson);
             let parsed = JSON.parse(weatherJson);
             console.log(parsed);
+            let icon = response.weather[0].icon;
+            let src = "openweathermap.org/img/w/" + icon + ".png";
             document.getElementById("meteo").innerHTML = "The weather is " + parsed.weather[0].main + ", it is " + parsed.main.temp +
-            " degree celsius" + " in " + parsed.name;
+                " degree celsius" + " in " + parsed.name;
             document.getElementById("url").href = get_url();
+            document.getElementById("icon").src = src;
         }
     };
 
     xhr.open("GET", get_url(), true);
     xhr.send()
 }
+
 function get_temperature() {
     city = document.getElementById("ville").value;
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let weatherJson = this.responseText;
             console.log(weatherJson);

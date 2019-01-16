@@ -11,3 +11,16 @@ a#url {
     color: red;
 
 }
+
+div.weather {
+    display: inline-block;
+    padding: 10px;
+}
+
+div.input {
+   display: inline-block;
+}
+
+p.card-text{
+    margin-bottom: auto;
+}
