@@ -1,37 +1,35 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Météo du jour</title>
-        <script src="meteo.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body onload="onLoad()">
-    <div class="container">
-        <div class="weather">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Ville</h5>
-                    <p id="id01" class="card-text"></p>
-                </div>
-             </div>
-        </div>
-
-        <div class="input">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Nouvelle ville</h5>
-                    <label></label>
-                    <p class="card-text">Ville</p>
-                    <label><input id="ville"/></label>
-                    <a href="#" class="btn btn-primary" onclick="onClick(document.getElementById('ville').value)">Actualiser</a>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Météo du jour</title>
+    <script src="meteo.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="onLoad()">
+<header>Ma Météo</header>
+<div class="container">
+    <div class="weather">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ville</h5>
+                <p id="id01" class="card-text"></p>
             </div>
         </div>
-
     </div>
 
+    <div class="input">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Nouvelle ville</h5>
+                <label></label>
+                <p class="card-text">Ville</p>
+                <label><input id="ville"/></label>
+                <a href="#" class="btn btn-primary" onclick="onClick(document.getElementById('ville').value)">Actualiser</a>
+            </div>
+        </div>
+    </div>
 
-
-    </body>
+</div>
+</body>
 </html>
