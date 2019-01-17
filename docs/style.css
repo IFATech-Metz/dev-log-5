@@ -26,7 +26,7 @@ a#url {
 }
 
 div.container{
-    background-color: F5F5F6;
+    background-color: #F5F5F6;
     padding-top: 50px;
     height: 100%;
 }
@@ -46,7 +46,7 @@ div.card {
 }
 
 div.input {
-   display: inline-block;
+    display: inline-block;
 }
 
 p.card-text{
