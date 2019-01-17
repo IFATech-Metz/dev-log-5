@@ -1,7 +1,7 @@
 const xhr = new XMLHttpRequest();
 
 
-const base_url = "http://api.openweathermap.org/data/2.5/weather";;
+const base_url = "https://api.openweathermap.org/data/2.5/weather";;
 const appid = "f5e810531af1756846022c6f387acf25";
 const unit = "metric";
 let weatherData;
