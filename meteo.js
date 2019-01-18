@@ -42,10 +42,6 @@ function onLoad() {
     xmlRequest("Metz");
 }
 
-function onClick(city) {
-    xmlRequest(city);
-}
-
 function insertData() {
     let element = document.getElementById("id01");
     let info = "Temp: " + dataArray.weather + " <br /> " +
