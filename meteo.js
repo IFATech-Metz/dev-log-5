@@ -46,12 +46,12 @@ function onClick(city) {
     xmlRequest(city);
 }
 
-function insertData(data) {
+function insertData() {
     let element = document.getElementById("id01");
     let info = "Temp: " + dataArray.weather + " <br /> " +
-    "Température: " + dataArray.temp + " <br /> " +
-    "Humidité: " + dataArray.humidity + " <br /> " +
-    "Préssion: " + dataArray.pressure + " <br /> ";
+        "Température: " + dataArray.temp + " <br /> " +
+        "Humidité: " + dataArray.humidity + " <br /> " +
+        "Pression: " + dataArray.pressure + " <br /> ";
     element.innerHTML = info;
 }
 
@@ -66,4 +66,25 @@ function parsingWeatherData(request){
         console.log(dataArray);
         insertData(dataArray);
     }
+}
+
+const initCard = city =>
+    "<div class=\"card-body\">" +
+    "<h5 class=\"card-title\">" + city + "</h5>" +
+    "           <p class=\"card-text\">" +
+    "Temp: " + dataArray.weather + " <br /> " +
+    "           Température: " + dataArray.temp + " <br /> " +
+    "Humidité: " + dataArray.humidity + " <br /> " +
+    "Préssion: " + dataArray.pressure + " <br /> " +
+    "</p>" +
+    "</div>"+
+    "</div>";
+
+function createNewCard(city) {
+    let divWeather = document.getElementById("1");
+    let newCardContent = document.createElement("div")
+    newCardContent.className = "card";
+    newCardContent.innerHTML = initCard(city);
+    divWeather.appendChild(newCardContent);
+    console.log(divWeather);
 }

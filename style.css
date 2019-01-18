@@ -35,7 +35,9 @@ div.weather {
     display: inline-block;
     padding: 10px;
 }
-
+div.card{
+    display: inline-block;
+}
 div.input {
     display: inline-block;
 }
