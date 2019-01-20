@@ -1,8 +1,8 @@
 const xhr = new XMLHttpRequest();
 
 
-const forcast_url = "http://api.openweathermap.org/data/2.5/forecast/daily";
-const current_url = "http://api.openweathermap.org/data/2.5/weather";
+const forcast_url = "https://api.openweathermap.org/data/2.5/forecast/daily";
+const current_url = "https://api.openweathermap.org/data/2.5/weather";
 const appid = "f5e810531af1756846022c6f387acf25";
 const unit = "metric";
 let weatherData;
