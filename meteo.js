@@ -1,12 +1,13 @@
 const xhr = new XMLHttpRequest();
 
+
 const base_url = "http://api.openweathermap.org/data/2.5/weather";;
 const appid = "f5e810531af1756846022c6f387acf25";
 const unit = "metric";
 let weatherData;
 
 let dataArray = {
-    "nom": "",
+    "name": "",
     "weather": "",
     "temp": "",
     "icon": "",
@@ -24,34 +25,35 @@ function getUrl(city) {
 function xmlRequest(city) {
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            parsingWeatherData(this.responseText);
+            addNewCard(this.responseText);
         }
         else{
-            parsingWeatherData(false);
+            return false
         }
     };
     xhr.open("GET", getUrl(city), true);
     xhr.send()
 }
 
-
 function parsingWeatherData(request){
     weatherData = (request ? JSON.parse(request) : false);
     if(weatherData){
-        dataArray.nom = weatherData.name;
+        dataArray.name = weatherData.name;
         dataArray.weather = weatherData.weather[0].description;
         dataArray.temp = weatherData.main.temp;
         dataArray.icon = weatherData.weather[0].icon;
         dataArray.humidity = weatherData.main.humidity;
         dataArray.pressure = weatherData.main.pressure;
-        addNewCard(dataArray);
     }
 }
 
-const initCard = () =>
+const initCard = (id) =>
     "<div class=\"card-body\">" +
-    "<h5 class=\"card-title\">" + dataArray.nom + "</h5>" +
-    "           <p class=\"card-text\">" +
+    "<h5 class=\"card-title\">" + dataArray.name +
+    "<button class=\"btn btn-danger\" id=" + id +" onClick=\"deleteCard(this.id)\">" + "-" +
+    "</button>" +
+    "</h5>" +
+    "<p class=\"card-text\">" +
     "Temp: " + dataArray.weather + " <br /> " +
     "           Température: " + dataArray.temp + " <br /> " +
     "Humidité: " + dataArray.humidity + " <br /> " +
@@ -64,10 +66,37 @@ function createNewCard(city) {
     xmlRequest(city);
 }
 
-function addNewCard() {
-    let divWeather = document.getElementById("1");
-    let newCardContent = document.createElement("div");
-    newCardContent.className = "card";
-    newCardContent.innerHTML = initCard();
-    divWeather.appendChild(newCardContent);
+let cardArray = [];
+
+function addNewCard(request) {
+    parsingWeatherData(request);
+    let newCard = document.createElement("div");
+    newCard.className = "card";
+    let newId = "" + cardArray.length;
+    newCard.setAttribute("id", newId);
+    newCard.innerHTML = initCard(newId);
+    cardArray = [...cardArray, newCard];
+    displayCardArray(cardArray);
+}
+
+function displayCardArray(cardArray) {
+    let divWeather = document.getElementById("1w");
+    console.log(cardArray);
+    divWeather.innerHTML = "";
+    for(let i = 0; i < cardArray.length; i++) {
+        divWeather.appendChild(cardArray[i]);
+    }
+}
+
+function deleteCard(id){
+    console.log(id);
+    let newCardArray = [];
+    for (let i = 0; i < cardArray.length; i++) {
+        if (cardArray[i].id !== id) {
+            let tempCard = cardArray[i];
+            newCardArray = [...newCardArray, tempCard];
+        }
+    }
+    cardArray = newCardArray;
+    displayCardArray(cardArray);
 }

@@ -26,7 +26,7 @@ a#url {
 }
 
 div.container{
-    background-color: F5F5F6;
+    background-color: #F5F5F6;
     padding-top: 50px;
     height: 100%;
 }
@@ -35,9 +35,16 @@ div.weather {
     display: inline-block;
     padding: 10px;
 }
-div.card{
+div.card {
     display: inline-block;
+    margin: 10px;
 }
+
+.btn-danger{
+    display: inline;
+    margin-left: 100px;
+}
+
 div.input {
     display: inline-block;
 }
