@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Météo du jour</title>
+        <script src="meteo.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>Ma Météo</header>
+        <div class="ville">
+            <label></label>
+            <div class="nville">Nouvelle Ville</div>
+
+            <div class="input"><label for="ville"></label><input id="ville" onkeydown="handleKeyPress(event,document.getElementById('ville').value)"/></div>
+            <div class="add">
+                <span id="numcard">0/8</span>
+                <button href="#" class="btn btn-primary" onclick="createNewCard(document.getElementById('ville').value)">
+                    Ajouter</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="1w"></div>
+        </div>
+    </body>
+</html>
